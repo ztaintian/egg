@@ -28,6 +28,11 @@ module.exports = appInfo => {
       app: true,
       // 是否加载到 agent 上，默认关闭
       agent: false,
+    },
+    // 添加跨域
+    cors: {
+      origin:'*',
+      allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
     }
   };
 
