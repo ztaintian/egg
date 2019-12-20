@@ -5,7 +5,7 @@ const Service = require('egg').Service;
 class UserService extends Service {
   async insertUser(params) {
     var result = await this.app.mysql.insert("user", params);
-    return 1;
+    return result;
   }
   async getUser(id) {
     var result;

@@ -31,11 +31,14 @@ module.exports = appInfo => {
     },
     // 添加跨域
     cors: {
-      origin:'*',
+      origin: '*',
       allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
-    }
+    },
   };
-
+  //csrf-token-missing 错误解决配置
+  exports.security = {
+    csrf: false
+  }
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1565058424941_6691';
 

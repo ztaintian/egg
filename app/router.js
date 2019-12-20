@@ -5,6 +5,6 @@
  */
 module.exports = app => {
   const { router, controller } = app;
-  router.post('/insetUser', controller.user.index);
-  router.get('/getUser', controller.user.getUser);
+  router.post('/addUser', controller.user.addUser); // 增
+  router.get('/getUser', controller.user.getUser); // 查
 };
