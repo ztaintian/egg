@@ -16,5 +16,9 @@ class UserService extends Service {
     }
     return result;
   }
+  async delUser(id) {
+    const result = await this.app.mysql.delete('user', { id: id });
+    return result;
+  }
 }
 module.exports = UserService;
